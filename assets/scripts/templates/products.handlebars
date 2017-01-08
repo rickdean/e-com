@@ -1,0 +1,32 @@
+  <div class="product-module-handlebars prod-desc" data-id={{products._id}}>
+    <p class="product-name">{{product.name}}</p>
+    <hr>
+    ${{product.price}}<br>
+    <hr>
+    <br>
+    <hr>
+    <img class="product-description-thumb" src={{product.image}} alt="http://imgur.com/qkPReeD">
+    <form class="product-to-cart">
+      <div class="form-group">
+        <input type="hidden" name="item[product_id]" value={{product._id}}>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="item[count]" value=1>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="item[name]"  value={{product.name}}>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="item[description]" value="{{product.description}}">
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="item[price]" value={{product.price}}>
+      </div>
+      <div class="form-group">
+        <input type="hidden" name="item[image]" value={{product.image}}>
+      </div>
+      <div class="view-button">
+      <button class="cart-add" type="submit">Add to Cart</button>
+    </div>
+    </form>
+  </div>

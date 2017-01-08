@@ -1,0 +1,14 @@
+{{#each orders as |order|}}
+  <div class="order-history-wrapper">
+    <p class="order-history-id col-xs-4">{{order._id}}</p>
+    <div class="order-history-items col-xs-4">
+      {{#each items as |item|}}
+      <p data-id={{item._id}}><span class="bold-span">Item name: </span>{{item.name}}</p>
+      <p data-id={{item._id}}><span class="bold-span">Item price: </span>${{item.price}}</p>
+      <p data-id={{item._id}}><span class="bold-span">Item count: </span>{{item.count}}</p>
+      <img src={{item.image}} alt="watch" class="order-history-thumb"/>
+      {{/each}}
+    </div>
+    <p class="order-history-date col-xs-4">Order date: {{order.createdAt}}</p>
+  </div>
+{{/each}}
