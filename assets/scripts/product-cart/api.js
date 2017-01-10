@@ -16,15 +16,25 @@ const getAllProducts = () =>
     method: 'GET',
   });
 
-const addItem = (data) =>
-    $.ajax ({
-    url: config.host + '/items',
-    method: 'POST',
-    data,
-    headers: {
-      Authorization: 'Token token=' + store.user.token,
-    }
+
+  const addItem = function (data){
+  return new Promise((resolve, reject) => {
+    return $.ajax ({
+      url: config.host + '/items',
+      method: 'POST',
+      headers: {
+        Authorization: 'Token token=' + store.user.token,
+      },
+      data,
+      success: (response) => {
+        resolve(response);
+      },
+      error: (error) => {
+        reject(error);
+      },
+    });
   });
+};
 
   const getItems = () =>
       $.ajax ({
