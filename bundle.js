@@ -1657,8 +1657,7 @@ webpackJsonp([0],[
 	  // console.log('Item in cart', data);
 	  $('#cart-button').show();
 	  $('#checkout-button').show();
-	  $('.modal-message2').html('Item added successfully!');
-	  $('.warning').hide();
+	  $('.warning').html('Item added successfully!');
 	  //  $('').html((data));
 	  //  return data;
 	};
@@ -1666,6 +1665,7 @@ webpackJsonp([0],[
 	var addItemFailure = function addItemFailure(error) {
 	  // console.log('FAIL!', error);
 	  // console.log('Log in to add items to your cart.');
+	  $('.warning').html('You must log in to purchase an item.');
 	};
 
 	var getItemsSuccess = function getItemsSuccess(data) {
@@ -3026,7 +3026,7 @@ webpackJsonp([0],[
 	    + alias2(alias1(((stack1 = (depth0 != null ? depth0.product : depth0)) != null ? stack1.price : stack1), depth0))
 	    + ">\n      </div>\n      <div class=\"form-group\">\n        <input type=\"hidden\" name=\"item[image]\" value="
 	    + alias2(alias1(((stack1 = (depth0 != null ? depth0.product : depth0)) != null ? stack1.image : stack1), depth0))
-	    + ">\n      </div>\n      <div class=\"view-button\">\n        <div class=\"modal-message2\"></div>\n      <button class=\"cart-add\" type=\"submit\">Add to Cart</button>\n      <p class=\"warning\"> Please sign in before adding to cart. </p>\n    </div>\n    </form>\n  </div>\n";
+	    + ">\n      </div>\n      <div class=\"view-button\">\n        <div class=\"modal-message2\"></div>\n      <button class=\"cart-add\" type=\"submit\">Add to Cart</button>\n      <p class=\"warning\"></p>\n\n    </div>\n    </form>\n  </div>\n";
 	},"useData":true});
 
 /***/ },
