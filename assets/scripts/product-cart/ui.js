@@ -40,8 +40,7 @@ const addItemSuccess = function(data) {
   // console.log('Item in cart', data);
   $('#cart-button').show();
   $('#checkout-button').show();
-  $('.modal-message2').html('Item added successfully!');
-  $('.warning').hide();
+  $('.warning').html('Item added successfully!');
   //  $('').html((data));
   //  return data;
 };
@@ -49,6 +48,7 @@ const addItemSuccess = function(data) {
 const addItemFailure = function(error) {
   // console.log('FAIL!', error);
   // console.log('Log in to add items to your cart.');
+  $('.warning').html('You must log in to purchase an item.');
 };
 
 const getItemsSuccess = function(data) {
