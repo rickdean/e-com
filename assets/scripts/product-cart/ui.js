@@ -41,6 +41,7 @@ const addItemSuccess = function(data) {
   $('#cart-button').show();
   $('#checkout-button').show();
   $('.modal-message2').html('Item added successfully!');
+  $('.warning').hide();
   //  $('').html((data));
   //  return data;
 };
